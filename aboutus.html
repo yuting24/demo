@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>aboutus</title>
+	<style>
+		body {margin:0;}
+
+.navbar {
+  overflow: hidden;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+}
+
+h2 {
+  float: left;
+  padding-left: 50px;
+  padding-top: 7px;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 30px 25px;
+  text-decoration: none;
+  font-size: 21px;
+}
+.a1 {
+  margin-left: 50px;
+}
+
+.navbar a:hover {
+  background: white;
+  color: #FF7C7C;
+  text-decoration: underline; 
+  transition:0.5s;
+}
+
+.main {
+  padding: 16px;
+  margin-top: 30px;
+  height: 1500px; /* Used in this example to enable scrolling */
+}
+
+input[type=text] {
+  float: right;
+  margin-top: 17px;
+  margin-right: 50px;
+  width: 130px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('search.png');
+  background-size: 20px;
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+  width: 25%;
+}
+
+/* The Modal (background) */
+.modal1 {
+display: none; /* Hidden by default */
+position: fixed;
+margin-top:6%;
+margin-left: 10%; /* Stay in place */
+z-index: 1; /* Sit on top */
+padding-top: 50px;
+padding-bottom: 50px; /* Location of the box */
+left: 0;
+top: 0;
+width: 80%; /* Full width */
+height: 70%; /* Full height */
+overflow: auto; /* Enable scroll if needed */
+background-color: rgb(0,0,0); /* Fallback color */
+background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+/* Modal Content */
+.modal-content1 {
+background-color: #fefefe;
+margin: auto;
+padding: 20px;
+border: 1px solid #888;
+width: 80%;
+}
+/* The Close Button */
+.close {
+color: #aaaaaa;
+float: right;
+font-size: 40px;
+font-weight: bold;
+}
+.close:hover,
+.close:focus {
+color: #000;
+text-decoration: none;
+cursor: pointer;
+}
+#myBtn1 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 10px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: red; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px;
+     /* Increase font size */
+    }
+    #myBtn1:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+    }
+    label.a{font-size:20px; font-weight: bold; color:black; }
+    #btn
+    {
+    position: relative;
+    left: 450px;
+    }
+
+    * {
+  box-sizing: border-box;
+}
+
+/* style the container */
+.container1 {
+  position: relative;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px 0 30px 0;
+} 
+
+/* style inputs and link buttons */
+input,
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  margin: 5px 0;
+  opacity: 0.85;
+  display: inline-block;
+  font-size: 17px;
+  line-height: 20px;
+  text-decoration: none; /* remove underline from anchors */
+}
+
+input:hover,
+.btn:hover {
+  opacity: 1;
+}
+
+/* add appropriate colors to fb, twitter and google buttons */
+.fb {
+  background-color: #3B5998;
+  color: white;
+}
+
+.twitter {
+  background-color: #55ACEE;
+  color: white;
+}
+
+.google {
+  background-color: #dd4b39;
+  color: white;
+}
+
+/* style the submit button */
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Two-column layout */
+.col {
+  float: left;
+  width: 50%;
+  margin: auto;
+  padding: 0 50px;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* vertical line */
+.vl {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  border: 2px solid #ddd;
+  height: 175px;
+}
+
+/* text inside the vertical line */
+.vl-innertext {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  padding: 8px 10px;
+}
+
+/* hide some text on medium and large screens */
+.hide-md-lg {
+  display: none;
+}
+
+/* bottom container */
+.bottom-container {
+  text-align: center;
+  background-color: #666;
+  border-radius: 0px 0px 4px 4px;
+}
+
+/* Responsive layout - when the screen is less than 650px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 650px) {
+  .col {
+    width: 100%;
+    margin-top: 0;
+  }
+  /* hide the vertical line */
+  .vl {
+    display: none;
+  }
+  /* show the hidden text on small screens */
+  .hide-md-lg {
+    display: block;
+    text-align: center;
+  }
+}
+
+.all{
+	padding-left: 5px;
+  font-family: "微軟正黑體";
+
+}
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+
+  }
+}
+.card {
+  margin: 15px;
+  margin-top: 28%;
+}
+
+.personimg {
+  width: 330px;
+  height: 430px;
+}
+
+.container2 {
+  background-color: white;
+  padding: 0 20px;
+}
+
+.container2::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.name {
+	margin-top: 0px;
+	padding-top: 20px;
+	font-size: 22px;
+}
+
+.title {
+font-size: 20px;
+color: black;
+}
+.contimg {
+	letter-spacing:20px;
+}
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 10px;
+  color: white;
+  background-color: #FF8884;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #CA3A36;
+}
+
+footer{
+  margin: 0px auto; 
+  width: 100%; 
+  height: 160px; 
+  background-color: #398AAA;
+}
+.inf{
+  padding-top: 20px; 
+  position: center; 
+  color: white; 
+  line-height:30px; 
+  text-align:center; 
+  font-size: 16px; 
+  letter-spacing: 3px;
+}
+
+</style>
+</head>
+<body bgcolor="#E4F4FF">
+<div class="navbar">
+  <h2>玩。吧&nbsp;&nbsp;&nbsp;&nbsp;Let's Play!</h2>
+<a href="index.html" class="a1">Home</a>
+  <a href="hot.html">Hot</a>
+  <a href="product.html">Toys</a>
+  <a href="aboutus.html">About us</a>
+  <a href="#" class="myBtn1">Login</a>
+  <a href="car.html">Shop car</a>
+  <form>
+  <input type="text" name="search" placeholder="Search..">
+</form>
+</div>
+
+ <!-- The Modal -->
+<div id="myModal1" class="modal1">
+            <!-- Modal content -->
+    <div class="modal-content1">
+    <div class="container1">
+    <span class="close">&times;</span>
+  <form action="/action_page.php">
+    <div class="row">
+      <h1 style="text-align:center">Sign up or Login</h1>
+      <div class="vl">
+        <span class="vl-innertext">or</span>
+      </div>
+
+      <div class="col">
+        <input type="name" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="submit" value="註冊">
+      </div>
+
+      <div class="col">
+        <div class="hide-md-lg">
+          <p>Or sign in manually:</p>
+        </div>
+
+        <input type="name" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="submit" value="登入">
+      </div>
+      
+    </div>
+  </form>
+</div>
+
+<div class="bottom-container">
+  <div class="row">
+    <div class="col">
+      <a href="#" style="color:white" class="btn">Contact us</a>
+    </div>
+    <div class="col">
+      <a href="#" style="color:white" class="btn">Forgot password?</a>
+    </div>
+  </div>
+</div>
+    </div>
+</div>
+<script>
+  // Get the modal
+            var modal = document.getElementById("myModal1");
+            // Get the button that opens the modal
+            var btn = document.getElementsByClassName("myBtn1");
+            // Get the <span> element that closes the modal
+              var span = document.getElementsByClassName("close")[0];
+              // When the user clicks the button, open the modal
+              for (var i = 0; i < btn.length; i++) {
+                  btn[i].onclick = function() {
+                  modal.style.display = "block";
+                }
+              }
+              // When the user clicks on <span> (x), close the modal
+                span.onclick = function() {
+                modal.style.display = "none";
+                }
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function(event) {
+                if (event.target == modal) {
+                modal.style.display = "none";
+                }
+                }
+                window.onscroll = function() {scrollFunction()};
+          function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          document.getElementById("myBtn1").style.display = "block";
+          } else {
+          document.getElementById("myBtn1").style.display = "none";
+          }
+          }
+          // When the user clicks on the button, scroll to the top of the document
+</script>
+<div class="all">
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img class="personimg" src="img/per1.jpg" alt="Jane">
+      <div class="container2">
+        <p class="name"><b>簡于庭</b></p>
+        <p class="title">中原大學資管系-二年級</p>
+        <p>興趣：攝影、旅遊</p>
+        <p>社群：</p>
+        <div class="contimg">
+		    <a href="https://instagram.com/yuting._.0924?utm_source=ig_profile_share&igshid=1x3074uw8qhbp">
+        <img src="img/ig.png" width="30" height="30"></a>
+        <a href="https://www.facebook.com/profile.php?id=100009792510784">
+        <img src="img/fb.jpg" width="30" height="30"></a>
+        <a href="https://github.com/yuting24">
+        <img src="img/git.jpg" width="30" height="30"></a></div></p>
+        <p><button class="button" onclick="self.location.href='mailto:justina870924@gmail.com';">Contact to Email</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img class="personimg" src="img/per2.jpg" alt="Mike">
+      <div class="container2">
+        <p class="name"><b>陳佳儀</b></p>
+        <p class="title">中原大學資管系-二年級</p>
+        <p>興趣：無</p>
+        <p>社群：</p>
+        <div class="contimg">
+		    <a href=" https://www.instagram.com/chia_yi_pig/">
+        <img src="img/ig.png" width="30" height="30"></a>
+        <a href=" https://www.facebook.com/profile.php?id=100000571712866">
+        <img src="img/fb.jpg" width="30" height="30"></a>
+        <a href="">
+        <img src="img/git.jpg" width="30" height="30"></a></div></p>
+        <p><button class="button" onclick="self.location.href='mailto:jspss94017@gmail.com';">Contact to Email</button></p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <img class="personimg" src="img/per3.jpg" alt="John" style="width:100%">
+      <div class="container2">
+        <p class="name"><b>曹乃文</b></p>
+        <p class="title">中原大學資管系-二年級</p>
+        <p>興趣：</p>
+        <p>社群：</p>
+        <div class="contimg">
+		     <a href="https://www.instagram.com/samson1484/">
+        <img src="img/ig.png" width="30" height="30"></a>
+        <a href="https://www.facebook.com/son.sam.5872">
+        <img src="img/fb.jpg" width="30" height="30"></a>
+        <a href="">
+        <img src="img/git.jpg" width="30" height="30"></a></div></p>
+        <p><button class="button" onclick="self.location.href='mailto:samson1484@gmail.com';">Contact to Email</button></p>
+      </div>
+    </div>
+  </div>
+   <div class="column">
+    <div class="card">
+      <img class="personimg" src="img/per3.jpg" alt="John" style="width:100%">
+      <div class="container2">
+        <p class="name"><b>曹乃文</b></p>
+        <p class="title">中原大學資管系-二年級</p>
+        <p>興趣：</p>
+        <p>社群：</p>
+        <div class="contimg">
+		    <a href="https://www.instagram.com/samson1484/">
+        <img src="img/ig.png" width="30" height="30"></a>
+        <a href="https://www.facebook.com/son.sam.5872">
+        <img src="img/fb.jpg" width="30" height="30"></a>
+        <a href="">
+        <img src="img/git.jpg" width="30" height="30"></a></div></p>
+        <p><button class="button" onclick="self.location.href='mailto:samson1484@gmail.com';">Contact to Email</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<footer>
+    <p class="inf">2019.06 About Let's Play.<br>
+    Tel:0988-888888<br>
+    Add:中原大學<br>
+    營業時間:10:00~22:00<br>
+    </p>
+</footer>
+</body>
+</html>

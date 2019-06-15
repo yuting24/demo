@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>我們的~商品頁</title>
+      <style>
+
+<!-- 
+  @import url(css/pp.css); 
+
+--> 
+
+    </style>
+  </head>
+  <body bgcolor="#E4F4FF" >
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+   <div class="navbar">
+  <h2>玩。吧&nbsp;&nbsp;&nbsp;&nbsp;Let's Play!</h2>
+  <a href="logindex.html" class="a1">Home</a>
+  <a href="loghot.html">Hot</a>
+  <a href="logproduct.html">Toys</a>
+  <a href="logaboutus.html">About us</a>
+  <a href="member.html">Member</a>
+  <a href="logcar.html">Shop car</a>
+  <a href="index.html">Logout</a>
+  <form>
+  <input type="text" name="search" placeholder="Search.." id="search">
+</form>
+</div>
+
+
+    <div class="sidenav">
+      <button class="dropdown-btn">公仔
+      <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="#" target="_self">迪士尼</a>
+        <a href="#">海賊王</a>
+        <a href="#">鋼彈</a>
+        <a href="#">其他</a>
+      </div>
+      <button class="dropdown-btn">扭蛋
+      <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="#">星之卡比</a>
+        <a href="#">其他</a>
+      </div>
+      <a href="#">娃娃</a>
+      <a href="#">拼圖</a>
+    </div>
+
+    <div class="main2">
+      <h2 id="one">商品名</h2>
+      
+      <img id="myImg" src="img/test.jpg" alt="pig" style="width:600px">
+      <br>
+      <p id="first">產品名稱:&nbsp;一隻豬</p>
+      <p id="inf">產品售價:&nbsp;11111111</p>
+      <p id="inf">購買數量:<br><input type="number" id="number" name="setnumber" value="1" min="1" max="5"></p>
+      <p id="inf"><input type="submit" class="buy" value="加入購物車"></p>
+      <hr>
+     <center><font class="topic">商品資訊</font></center>
+      <hr>
+      <div class="text2"><p id="t">這裡跑商品資訊<p><br><br><br><br><br><br><br><br><br><br><br></div>
+      <hr>
+      <center><font class="topic">寫寫評價</font></center>
+      <hr>
+      <div class="text2">
+        <p id="t">
+        會員帳號:<input type="text" class="account" name="account">
+        </p>
+         <p id="t"><font class="rate">評價分數:</font></p>
+        <div class="rating">
+          
+          <input type="radio" id="star5" name="rating5" value="5" hidden/>
+          <label for="star5"></label>
+          <input type="radio" id="star4" name="rating4" value="4" hidden/>
+          <label for="star4"></label>
+          <input type="radio" id="star3" name="rating3" value="3" hidden/>
+          <label for="star3"></label>
+          <input type="radio" id="star2" name="rating2" value="2" hidden/>
+          <label for="star2"></label>
+          <input type="radio" id="star1" name="rating1" value="1" hidden/>
+          <label for="star1"></label>
+        </div>
+        <br>
+        <p id="t">評論內容:
+          <textarea>
+        </textarea></p>
+        <input type="submit" class="send" value="提交">
+        <input type="submit" class="send2" value="清除">
+      </div>
+      </div>
+      <footer>
+    <p class="inf">2019.06 About Let's Play.<br>
+    Tel:0988-888888<br>
+    Add:中原大學<br>
+    營業時間:10:00~22:00<br>
+    </p>
+</footer>
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+      </div>
+      <script>
+                var dropdown = document.getElementsByClassName("dropdown-btn");
+            var i;
+            for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+            } else {
+            dropdownContent.style.display = "block";
+            }
+            });
+            }
+      // Get the modal
+      var modal = document.getElementById("myModal");
+      // Get the image and insert it inside the modal - use its "alt" text as a caption
+      var img = document.getElementById("myImg");
+      var modalImg = document.getElementById("img01");
+      var captionText = document.getElementById("caption");
+      img.onclick = function(){
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      captionText.innerHTML = this.alt;
+      }
+      // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+        // When the user clicks on <span> (x), close the modal
+          span.onclick = function() {
+          modal.style.display = "none";
+          }
+          // When the user scrolls down 20px from the top of the document, show the button
+          window.onscroll = function() {scrollFunction()};
+          function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          document.getElementById("myBtn").style.display = "block";
+          } else {
+          document.getElementById("myBtn").style.display = "none";
+          }
+          }
+          // When the user clicks on the button, scroll to the top of the document
+          function topFunction() {
+          document.body.scrollTop = 0; // For Safari
+          document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+          }
+          </script>
+        </body>
+      </html>

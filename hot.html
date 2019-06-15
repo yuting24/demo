@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>歡迎參觀-玩吧!</title>
+    <style>
+<!-- 
+  @import url(css/test2.css); 
+--> 
+</STYLE>
+    
+  <body bgcolor="#E4F4FF" >
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<div class="navbar">
+  <h2>玩。吧&nbsp;&nbsp;&nbsp;&nbsp;Let's Play!</h2>
+  <a href="index.html" class="a1">Home</a>
+  <a href="hot.html">Hot</a>
+  <a href="product.html">Toys</a>
+  <a href="aboutus.html">About us</a>
+  <a href="#" class="myBtn">Login</a>
+  <a href="car.html">Shop car</a>
+  <form>
+  <input type="text" name="search" placeholder="Search..">
+</form>
+</div>
+
+
+
+    <div class="sidenav">
+      <button class="dropdown-btn">公仔
+      <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="#" target="_self">迪士尼</a>
+        <a href="#">海賊王</a>
+        <a href="#">鋼彈</a>
+        <a href="#">其他</a>
+      </div>
+      <button class="dropdown-btn">扭蛋
+      <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="#">星之卡比</a>
+        <a href="#">其他</a>
+      </div>
+      <a href="#">娃娃</a>
+      <a href="#">拼圖</a>
+    </div>
+    <div class="main2">
+      <div id="公仔" class="tabcontent">
+        <h2 id="one">hot sale</h2>
+        <div class="card">
+          <div class="container">
+            <a href="production page.html">
+              <p class="*p"></p><img src="img/test.jpg" alt="Avatar" style="width:100%" class="image">
+              <div class="overlay">
+                <div class="text">this is a pig</div>
+              </div>
+            </div>
+            <h1>Tailored Jeans</h1>
+            <p class="price">$19.99</p></a>
+            <p><button class="myBtn">Add to Cart</button></p>
+          </div>
+          <div class="card">
+            <div class="container">
+              <a href="production page.html">
+                <p class="*p"></p><img src="img/test.jpg" alt="Avatar" style="width:100%" class="image">
+                <div class="overlay">
+                  <div class="text">this is a pig</div>
+                </div>
+              </div>
+              <h1>Tailored Jeans</h1>
+              <p class="price">$19.99</p></a>
+              <p><button class="myBtn">Add to Cart</button></p>
+            </div>
+             <div class="card">
+            <div class="container">
+              <a href="production page.html">
+                <p class="*p"></p><img src="img/test.jpg" alt="Avatar" style="width:100%" class="image">
+                <div class="overlay">
+                  <div class="text">this is a pig</div>
+                </div>
+              </div>
+              <h1>Tailored Jeans</h1>
+              <p class="price">$19.99</p></a>
+              <p><button class="myBtn">Add to Cart</button></p>
+            </div>
+             <div class="card">
+            <div class="container">
+              <a href="production page.html">
+                <p class="*p"></p><img src="img/test.jpg" alt="Avatar" style="width:100%" class="image">
+                <div class="overlay">
+                  <div class="text">this is a pig</div>
+                </div>
+              </div>
+              <h1>Tailored Jeans</h1>
+              <p class="price">$19.99</p></a>
+              <p><button class="myBtn">Add to Cart</button></p>
+            </div>
+             <div class="card">
+            <div class="container">
+              <a href="production page.html">
+                <p class="*p"></p><img src="img/test.jpg" alt="Avatar" style="width:100%" class="image">
+                <div class="overlay">
+                  <div class="text">this is a pig</div>
+                </div>
+              </div>
+              <h1>Tailored Jeans</h1>
+              <p class="price">$19.99</p></a>
+              <p><button class="myBtn">Add to Cart</button></p>
+            </div>
+            <div class="card">
+              <div class="container">
+                <a href="production page.html">
+                  <p class="*p"></p><img src="img/test.jpg" alt="Avatar" style="width:100%" class="image">
+                  <div class="overlay">
+                    <div class="text">this is a pig</div>
+                  </div>
+                </div>
+                <h1>Tailored Jeans</h1>
+                <p class="price">$19.99</p></a>
+                <p><button class="myBtn">Add to Cart</button></p>
+              </div>
+            </div>
+          </div>
+<footer>
+    <p class="inf">2019.06 About Let's Play.<br>
+    Tel:0988-888888<br>
+    Add:中原大學<br>
+    營業時間:10:00~22:00<br>
+    </p>
+</footer>
+          
+          <!-- The Modal -->
+          <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p>已加入購物車!!</p>
+            </div>
+
+
+            <script>
+            var dropdown = document.getElementsByClassName("dropdown-btn");
+            var i;
+            for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+            } else {
+            dropdownContent.style.display = "block";
+            }
+            });
+            }
+            // Get the modal
+            var modal = document.getElementById("myModal");
+            // Get the button that opens the modal
+            var btn = document.getElementsByClassName("myBtn");
+            // Get the <span> element that closes the modal
+              var span = document.getElementsByClassName("close")[0];
+              // When the user clicks the button, open the modal
+              for (var i = 0; i < btn.length; i++) {
+                  btn[i].onclick = function() {
+                  modal.style.display = "block";
+                }
+              }
+              // When the user clicks on <span> (x), close the modal
+                span.onclick = function() {
+                modal.style.display = "none";
+                }
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function(event) {
+                if (event.target == modal) {
+                modal.style.display = "none";
+                }
+                }
+
+                window.onscroll = function() {scrollFunction()};
+          function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          document.getElementById("myBtn").style.display = "block";
+          } else {
+          document.getElementById("myBtn").style.display = "none";
+          }
+          }
+          // When the user clicks on the button, scroll to the top of the document
+          function topFunction() {
+          document.body.scrollTop = 0; // For Safari
+          document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+          }
+                </script>
+              </body>
+            </html>

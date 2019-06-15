@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>會員中心</title>
+<style>
+@import"css/st.css";
+.allrow {
+  font-size: 17px;
+  padding: 8px;
+  width: 80%;
+  padding-left: 20%;
+  margin-top:8%;
+  font-family: "微軟正黑體";
+}
+
+* {
+  box-sizing: border-box;
+}
+.mem {
+	font-size: 30px;
+}
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+  
+}
+.row1 {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+  margin-top: 30px;
+}
+
+
+.col-50 {
+  -ms-flex: 40%; /* IE10 */
+  flex: 40%;
+}
+
+.col-75 {
+  -ms-flex: 40%; /* IE10 */
+  flex: 40%;
+}
+
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container3 {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+input[type=text1] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btnc {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btnc:hover {
+  background-color: #45a049;
+}
+
+a {
+  color: #2196F3;
+}
+
+hr {
+  border: 1px solid brown;
+  margin-bottom: 30px;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  
+}
+</style>
+</head>
+<body bgcolor="#E4F4FF">
+<div class="navbar">
+  <h2>玩。吧&nbsp;&nbsp;&nbsp;&nbsp;Let's Play!</h2>
+  <a href="logindex.html" class="a1">Home</a>
+  <a href="loghot.html">Hot</a>
+  <a href="logproduct.html">Toys</a>
+  <a href="logaboutus.html">About us</a>
+  <a href="member.html">Member</a>
+  <a href="logcar.html">Shop car</a>
+  <a href="index.html">Logout</a>
+  <form>
+  <input type="text" name="search" placeholder="Search..">
+</form>
+</div>
+
+ <!-- The Modal -->
+<div id="myModal" class="modal">
+            <!-- Modal content -->
+    <div class="modal-content">
+    <div class="container">
+    <span class="close">&times;</span>
+  <form action="/action_page.php">
+    <div class="row">
+      <h1 style="text-align:center">Sign up or Login</h1>
+      <div class="vl">
+        <span class="vl-innertext">or</span>
+      </div>
+
+      <div class="col">
+        <input type="name" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="submit" value="註冊">
+      </div>
+
+      <div class="col">
+        <div class="hide-md-lg">
+          <p>Or sign in manually:</p>
+        </div>
+
+        <input type="name" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="submit" value="登入">
+      </div>
+      
+    </div>
+  </form>
+</div>
+
+    </div>
+</div>
+
+<div class="allrow">
+<div class="row">
+  <div class="col-75">
+    <div class="container3">
+      <form action="/action_page.php">
+      
+        <div class="row">
+          <div class="col-50">
+            <p class="mem">會員資料</p><hr>
+            <label for="fname"><i class="fa fa-user"></i> 姓名</label>
+            <input type="text1" id="fname" name="firstname" placeholder="John M. Doe">
+			<div class="row">
+              <div class="col-50">
+                <label for="birth"><i class="fa fa-birthday-cake"></i> 生日</label>
+                <input type="text1" id="state" name="state" placeholder="NY">
+              </div>
+              <div class="col-50">
+                <label for="gender"><i class="fa fa-venus-mars"></i> 性別</label>
+                <input type="text1" id="zip" name="zip" placeholder="10001">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-50">
+                <label for="birth"><i class="fa fa-envelope"></i> Email</label>
+                <input type="text1" id="email" name="email" placeholder="john@example.com">
+              </div>
+              <div class="col-50">
+                <label for="tel"><i class="fa fa-phone"></i> 電話</label>
+                <input type="text1" id="tel" name="tel" placeholder="10001">
+              </div>
+            </div>
+  
+            <label for="adr"><i class="fa fa-address-card-o"></i> 地址</label>
+            <input type="text1" id="adr" name="address" placeholder="542 W. 15th Street">
+          </div>
+
+          
+          
+        </div>
+        
+        <input type="submit" value="更新會員資料" class="btnc">
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="row1">
+  <div class="col-75">
+    <div class="container3">
+      <form action="/action_page.php">
+      
+        <div class="row">
+          <div class="col-50">
+            <p class="mem">修改密碼</p><hr>
+            <label for="fname"><i class="fa fa-unlock"></i> 舊密碼</label>
+            <input type="text1" id="fname" name="firstname" placeholder="John M. Doe">
+			
+            <label for="adr"><i class="fa fa-lock"></i> 新密碼</label>
+            <input type="text1" id="adr" name="address" placeholder="542 W. 15th Street">
+
+            <label for="fname"><i class="fa fa-lock"></i> 新密碼確認</label>
+            <input type="text1" id="fname" name="firstname" placeholder="John M. Doe">
+          </div>     
+        </div>
+        
+        <input type="submit" value="確認修改" class="btnc">
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+<footer>
+    <p class="inf">2019.06 About Let's Play.<br>
+    Tel:0988-888888<br>
+    Add:中原大學<br>
+    營業時間:10:00~22:00<br>
+    </p>
+</footer>
+</body>
+</html>
